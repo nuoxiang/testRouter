@@ -6,9 +6,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import think.router.B;
-import think.router.Utils;
+import com.github.mzule.activityrouter.annotation.Module;
+import com.github.mzule.activityrouter.annotation.Modules;
+import com.github.mzule.activityrouter.router.Routers;
 
+import think.router.B;
+
+@Module("app")
+@Modules({"app","testa","testb"})
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button tv_testa;
     private Button tv_testb;
@@ -27,16 +32,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.tv_testa:
-                Intent intent = new Intent();
-                intent.setClassName(this, Utils.TESTA);
-                startActivity(intent);
+//                Intent intent = new Intent();
+//                intent.setClassName(this, Utils.TESTA);
+//                startActivity(intent);
+
+                Routers.open(this, "test://testA");
                 break;
             case R.id.tv_testb:
                 B b = new B();
                 b.age = 10;
                 b.text = "test";
-                intent = new Intent();
-                intent.setClassName(this, Utils.TESTB);
+//                intent = new Intent();
+//                intent.setClassName(this, Utils.TESTB);
+
+                Intent intent = Routers.resolve(this, "test://testB");
                 intent.putExtra("test", b);
                 startActivity(intent);
                 break;

@@ -5,12 +5,17 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
+import com.github.mzule.activityrouter.annotation.Module;
+import com.github.mzule.activityrouter.annotation.Router;
+
 import think.router.B;
 
 /**
  * Created by dazhuanjia_rx on 17/2/13.
  */
 
+@Module("testb")
+@Router("testB")
 public class TestBAct extends AppCompatActivity {
     private TextView testb_content;
 
