@@ -1,0 +1,13 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="think.testb">
+
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true">
+
+        <activity
+            android:name="think.testb.TestBAct"
+            android:theme="@style/router_AppTheme" />
+    </application>
+
+</manifest>

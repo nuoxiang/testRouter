@@ -1,0 +1,12 @@
+ext {
+    module_debug_build = ["test" : false,
+                          "testA": true,
+                          "testB": true
+    ]
+    module_release_build = ["test" : true,
+                            "testA": false,
+                            "testB": false
+    ]
+
+    module_build = module_release_build
+}

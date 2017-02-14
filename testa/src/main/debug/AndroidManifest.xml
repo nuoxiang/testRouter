@@ -1,0 +1,20 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="think.testa">
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:label="@string/testa_app_name"
+        android:supportsRtl="true">
+
+        <activity
+            android:name=".TestAAct"
+            android:theme="@style/router_AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
